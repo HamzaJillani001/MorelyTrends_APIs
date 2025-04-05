@@ -65,7 +65,7 @@ namespace MorelyTrends.Migrations
 
                     b.HasIndex("OrderId1");
 
-                    b.ToTable("OrderDetails");
+                    b.ToTable("OrderDetails", (string)null);
                 });
 
             modelBuilder.Entity("Ecommerce.Domain.Entities.OrderPayment", b =>
@@ -108,7 +108,7 @@ namespace MorelyTrends.Migrations
 
                     b.HasIndex("OrderId1");
 
-                    b.ToTable("OrderPayments");
+                    b.ToTable("OrderPayments", (string)null);
                 });
 
             modelBuilder.Entity("Ecommerce.Domain.Entities.OrderStatus", b =>
@@ -149,7 +149,7 @@ namespace MorelyTrends.Migrations
 
                     b.HasIndex("OrderStatusValueId");
 
-                    b.ToTable("OrderStatuss");
+                    b.ToTable("OrderStatuss", (string)null);
                 });
 
             modelBuilder.Entity("Ecommerce.Domain.Entities.OrderStatusValue", b =>
@@ -182,7 +182,7 @@ namespace MorelyTrends.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("OrderStatusValues");
+                    b.ToTable("OrderStatusValues", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -304,7 +304,7 @@ namespace MorelyTrends.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Buyers");
+                    b.ToTable("Buyers", (string)null);
                 });
 
             modelBuilder.Entity("MorelyTrends.Domain.Entities.Identity.ApplicationRole", b =>
@@ -455,7 +455,7 @@ namespace MorelyTrends.Migrations
 
                     b.HasIndex("SellerId");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("MorelyTrends.Domain.Entities.OrderItem", b =>
@@ -482,7 +482,7 @@ namespace MorelyTrends.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("OrderItems");
+                    b.ToTable("OrderItems", (string)null);
                 });
 
             modelBuilder.Entity("MorelyTrends.Domain.Entities.Payout", b =>
@@ -520,7 +520,7 @@ namespace MorelyTrends.Migrations
 
                     b.HasIndex("SellerId");
 
-                    b.ToTable("Payouts");
+                    b.ToTable("Payouts", (string)null);
                 });
 
             modelBuilder.Entity("MorelyTrends.Domain.Entities.Product", b =>
@@ -603,7 +603,7 @@ namespace MorelyTrends.Migrations
 
                     b.HasIndex("SellerId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("MorelyTrends.Domain.Entities.ProductBrand", b =>
@@ -637,7 +637,7 @@ namespace MorelyTrends.Migrations
 
                     b.HasIndex("SellerId");
 
-                    b.ToTable("ProductBrands");
+                    b.ToTable("ProductBrands", (string)null);
                 });
 
             modelBuilder.Entity("MorelyTrends.Domain.Entities.ProductImage", b =>
@@ -671,7 +671,7 @@ namespace MorelyTrends.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductImages");
+                    b.ToTable("ProductImages", (string)null);
                 });
 
             modelBuilder.Entity("MorelyTrends.Domain.Entities.ProductType", b =>
@@ -705,7 +705,7 @@ namespace MorelyTrends.Migrations
 
                     b.HasIndex("SellerId");
 
-                    b.ToTable("ProductTypes");
+                    b.ToTable("ProductTypes", (string)null);
                 });
 
             modelBuilder.Entity("MorelyTrends.Domain.Entities.Seller", b =>
@@ -740,7 +740,7 @@ namespace MorelyTrends.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Seller");
+                    b.ToTable("Seller", (string)null);
                 });
 
             modelBuilder.Entity("MorelyTrends.Domain.Entities.SellerAddress", b =>
@@ -775,7 +775,7 @@ namespace MorelyTrends.Migrations
                     b.HasIndex("SellerId")
                         .IsUnique();
 
-                    b.ToTable("SellerAddress");
+                    b.ToTable("SellerAddress", (string)null);
                 });
 
             modelBuilder.Entity("Ecommerce.Domain.Entities.OrderDetails", b =>
