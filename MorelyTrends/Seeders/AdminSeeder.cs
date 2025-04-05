@@ -44,16 +44,14 @@ namespace MorelyTrends.Infrastructure.Seeders
                     user.EmailConfirmed = true;
                     user.PhoneNumberConfirmed = true;
 
-                    // Check if user exists by email (not by Id, since Id isn't set yet)
-                    var existingUser = await userManager.FindByEmailAsync(user.Email);
-
-                    if (existingUser == null)
+                    if (appDbContext.Users.All(x => x.Id != user.Id))
                     {
                         // CreateAsync will generate the Id automatically
                         var createResult = await userManager.CreateAsync(user, "123@Test");
 
                         if (createResult.Succeeded)
                         {
+                            await userManager.CreateAsync(user, "123@Test");
                             await userManager.AddToRoleAsync(user, "SuperAdmin");
                             await userManager.AddToRoleAsync(user, "Seller");
                             await userManager.AddToRoleAsync(user, "Buyer");
